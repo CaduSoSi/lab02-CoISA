@@ -9,6 +9,7 @@ public class Coisa {
         System.out.println("-----");
         registrarResumos();
     }
+
     public static void registrarDescanso() {
         Descanso descanso = new Descanso();
         System.out.println(descanso.getStatusGeral());
