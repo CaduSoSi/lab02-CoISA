@@ -1,3 +1,4 @@
+//definição método Descanso
 public class Descanso{
     private int horasdescansadas;
     private int semanasdescansadas;
