@@ -1,28 +1,31 @@
 public class Disciplina {
     String nomeDisciplina;
     int horasEstudo;
-    Double[] notas = new Double[4];
+    Double[] nota = new Double[4];
 
     public Disciplina(String nomeDisciplina){
-        this.notas[0] = 0.0;
-        this.notas[1] = 0.0;
-        this.notas[2] = 0.0;
-        this.notas[3] = 0.0;
+        this.nota[0] = 0.0;
+        this.nota[1] = 0.0;
+        this.nota[2] = 0.0;
+        this.nota[3] = 0.0;
         this.nomeDisciplina = nomeDisciplina;
         this.horasEstudo = 0;
 
     }
     public double calcularMedia(){
         double media = 0;
-        for (double nota : notas) {
+        for (double nota : nota) {
             media += nota;
         }
-        return media/ notas.length;
+        return media/ nota.length;
     }
     public void cadastraHoras(int horas) {
+        this.horasEstudo += horas;
     }
 
     public void cadastraNota(int nota, double valor) {
+        this.nota[nota-1] = valor;
+
     }
 
     public boolean aprovado() {
@@ -30,7 +33,7 @@ public class Disciplina {
     }
     @Override
     public String toString(){
-        return "";
+        return this.nomeDisciplina + " " +  this.horasEstudo + " " + calcularMedia() + " " + "[" + nota[0] + " " + nota[1] + " "+ nota[2] + " " + nota[3] + "]";
     }
 
 

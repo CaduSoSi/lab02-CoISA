@@ -17,7 +17,7 @@ public class RegistroResumos {
         }
         boolean procede = false;
         for (int i = 0; i < this.tema.length; i++){
-            if (this.tema[i].equals(tema)) {
+            if (this.tema[i] != null && this.tema[i].equals(tema)) {
                 procede = true;
             }
         }
@@ -73,6 +73,12 @@ public class RegistroResumos {
 
         int count = this.conta();
         String retorno = "- " + count + " resumo(s) cadastrado(s)" + "\n" + "- ";
+        for (int i = 0; i < this.conta(); i++){
+            if (i >= 1){
+                retorno += "| ";
+            }
+            retorno += tema[i] + " ";
+        }
         return retorno;
     }
 }
