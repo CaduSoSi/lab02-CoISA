@@ -70,12 +70,9 @@ public class RegistroResumos {
     }
 
     public String imprimeResumos() {
-        int count = 0;
-        for (int i = 0; i < this.limite; i++) {
-            if (this.tema[i] != null) {
-                count += 1;
-            } else {
-                break;
-            }
-        }
+
+        int count = this.conta();
+        String retorno = "- " + count + " resumo(s) cadastrado(s)" + "\n" + "- ";
+        return retorno;
+    }
 }

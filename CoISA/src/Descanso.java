@@ -27,14 +27,10 @@ public class Descanso{
 
     //metodo de verificar status
     public String getStatusGeral(){
-        if (semanasdescansadas != 0){
-            if(horasdescansadas/semanasdescansadas >= 26){
+            if ((semanasdescansadas > 0) && (horasdescansadas / semanasdescansadas >= 26)) {
                 return "descansado";
             } else {
                 return "cansado";
             }
-        } else {
-            return "Divisão por 0!";
         }
-    }
 }
