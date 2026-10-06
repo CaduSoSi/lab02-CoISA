@@ -11,14 +11,6 @@ public class Descanso{
         this.semanasdescansadas = 0;
     }
 
-    //métodos gets
-    public int visulizaHorasDescanso() {
-        return horasdescansadas;
-    }
-    public int visualizaeNumeroSemanas() {
-        return semanasdescansadas;
-    }
-
     //métodos sets
     public void defineHorasDescanso(int horasdescansadas) {
         this.horasdescansadas = horasdescansadas;
