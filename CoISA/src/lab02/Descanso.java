@@ -1,6 +1,6 @@
+package lab02;
 
-
-//definição método Descanso
+//definição método lab02.Descanso
 public class Descanso{
     private int horasdescansadas;
     private int semanasdescansadas;
