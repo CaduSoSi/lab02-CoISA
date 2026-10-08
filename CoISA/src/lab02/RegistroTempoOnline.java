@@ -1,9 +1,9 @@
 package lab02;
 
 public class RegistroTempoOnline {
-    String nomeDisciplina;
-    int tempoOnlineEsperado;
-    int tempoInvestido;
+    private String nomeDisciplina;
+    private int tempoOnlineEsperado;
+    private int tempoInvestido;
 
     public RegistroTempoOnline(String nomeDisciplina){
         this.nomeDisciplina = nomeDisciplina;

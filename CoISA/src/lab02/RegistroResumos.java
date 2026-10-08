@@ -1,5 +1,4 @@
 package lab02;
-import java.util.Arrays;
 
 public class RegistroResumos {
     private int limite;
@@ -59,15 +58,13 @@ public class RegistroResumos {
     }
 
     public boolean temResumo(String tema) {
-        boolean tem = false;
         for (int i = 0; i < this.limite; i++) {
-            if (this.resumos[i].getTema().equals(tema)) {
-                tem = true;
-            } else {
-                break;
+            if (this.resumos[i] != null && this.resumos[i].getTema().equals(tema)) {
+                return true;
             }
         }
-        return tem;
+
+        return false;
     }
 
     public String imprimeResumos() {
@@ -82,12 +79,25 @@ public class RegistroResumos {
         }
         return retorno;
     }
-    public String[] busca(String chaveDeBusca){
+    public String[] busca(String chaveDeBusca) {
         chaveDeBusca = chaveDeBusca.toLowerCase();
-        for (int i = 0; i < this.conta(); i++){
-            if resumos[i].contains();
+        int cont = 0;
+        for (int i = 0; i < this.conta(); i++) {
+            String c = resumos[i].getConteudo().toLowerCase();
+            if (c.contains(chaveDeBusca)) {
+                cont += 1;
+            }
 
         }
+        String[] retorno = new String[cont];
+        int itera = 0;
+        for (int i = 0; i < this.conta(); i++) {
+            String c = resumos[i].getConteudo().toLowerCase();
+            if (c.contains(chaveDeBusca)) {
+                retorno[itera] = resumos[i].getTema();
+                itera++;
+            }
+        }
+        return retorno;
     }
-
 }
