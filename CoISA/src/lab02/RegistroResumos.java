@@ -2,14 +2,13 @@ package lab02;
 
 public class RegistroResumos {
     private int limite;
-    private String[] tema;
-    private String[] conteudo;
-    private int iterador = 0;
+    private Resumo[] resumos;
+    private int iterador;
 
     public RegistroResumos(int limite){
-        this.tema = new String[limite];
-        this.conteudo = new String[limite];
+        this.resumos = new Resumo[limite];
         this.limite = limite;
+        this.iterador = 0;
 
     }
 
@@ -18,14 +17,13 @@ public class RegistroResumos {
             iterador = 0;
         }
         boolean procede = false;
-        for (int i = 0; i < this.tema.length; i++){
-            if (this.tema[i] != null && this.tema[i].equals(tema)) {
+        for (int i = 0; i < this.resumos.length; i++){
+            if (this.resumos[i] != null && this.resumos[i].getTema().equals(tema)) {
                 procede = true;
             }
         }
         if (!procede){
-            this.tema[iterador] = tema;
-            this.conteudo[iterador] = conteudo;
+            this.resumos[iterador] = new Resumo(tema, conteudo);
             iterador += 1;
         }
     }
@@ -34,7 +32,7 @@ public class RegistroResumos {
         String[] retorno;
         int count = 0;
         for (int i = 0; i<this.limite; i++){
-            if (this.tema[i] != null){
+            if (this.resumos[i] != null){
                 count += 1;
             } else {
                 break;
@@ -42,7 +40,7 @@ public class RegistroResumos {
         }
         retorno = new String[count];
         for (int i = 0; i<count; i++){
-            retorno[i] = this.tema[i] + ": " + this.conteudo[i];
+            retorno[i] = this.resumos[i].getTema() + ": " + this.resumos[i].getConteudo();
         }
         return retorno;
     }
@@ -50,7 +48,7 @@ public class RegistroResumos {
     public int conta() {
         int count = 0;
         for (int i = 0; i < this.limite; i++) {
-            if (this.tema[i] != null) {
+            if (this.resumos[i] != null) {
                 count += 1;
             } else {
                 break;
@@ -62,7 +60,7 @@ public class RegistroResumos {
     public boolean temResumo(String tema) {
         boolean tem = false;
         for (int i = 0; i < this.limite; i++) {
-            if (this.tema[i].equals(tema)) {
+            if (this.resumos[i].getTema().equals(tema)) {
                 tem = true;
             } else {
                 break;
@@ -79,8 +77,15 @@ public class RegistroResumos {
             if (i >= 1){
                 retorno += "| ";
             }
-            retorno += tema[i] + " ";
+            retorno += resumos[i].getTema() + " ";
         }
         return retorno;
     }
+    public String[] busca(String chaveDeBusca){
+        chaveDeBusca = chaveDeBusca.toLowerCase();
+        for (int i = 0; i < this.conta(); i++){
+
+        }
+    }
+
 }
