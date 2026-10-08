@@ -1,4 +1,5 @@
 package lab02;
+import java.util.Arrays;
 
 public class RegistroResumos {
     private int limite;
@@ -84,6 +85,7 @@ public class RegistroResumos {
     public String[] busca(String chaveDeBusca){
         chaveDeBusca = chaveDeBusca.toLowerCase();
         for (int i = 0; i < this.conta(); i++){
+            if resumos[i].contains();
 
         }
     }
