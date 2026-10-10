@@ -1,4 +1,4 @@
-package lab02;
+package br.edu.ufcg.computacao.p2lp2.coisa;
 
 public class RegistroTempoOnline {
     private String nomeDisciplina;

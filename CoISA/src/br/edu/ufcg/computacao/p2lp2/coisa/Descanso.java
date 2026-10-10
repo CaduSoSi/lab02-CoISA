@@ -1,4 +1,4 @@
-package lab02;
+package br.edu.ufcg.computacao.p2lp2.coisa;
 
 //definição método lab02.Descanso
 public class Descanso{

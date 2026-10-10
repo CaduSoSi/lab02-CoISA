@@ -1,4 +1,4 @@
-package lab02;
+package br.edu.ufcg.computacao.p2lp2.coisa;
 
 public class Resumo {
     private String tema;
@@ -12,6 +12,6 @@ public class Resumo {
     }
 
     public String getConteudo() {
-        return this.conteudo;
+        return conteudo;
     }
 }

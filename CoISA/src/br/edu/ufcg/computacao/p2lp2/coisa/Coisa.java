@@ -1,4 +1,4 @@
-package lab02;
+package br.edu.ufcg.computacao.p2lp2.coisa;
 public class Coisa {
     public static void main(String[] args) {
         registrarDescanso();
@@ -59,6 +59,7 @@ public class Coisa {
         for (int i = 0; i < meusResumos.conta(); i++) {
             System.out.println(resumos[i]);
         }
+
 
         System.out.println();
         System.out.println("Resumos: ");

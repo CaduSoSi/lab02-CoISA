@@ -1,4 +1,7 @@
-package lab02;
+package br.edu.ufcg.computacao.p2lp2.coisa;
+
+import java.util.Arrays;
+
 
 public class RegistroResumos {
     private int limite;
@@ -98,6 +101,7 @@ public class RegistroResumos {
                 itera++;
             }
         }
+        Arrays.sort(retorno);
         return retorno;
     }
 }
