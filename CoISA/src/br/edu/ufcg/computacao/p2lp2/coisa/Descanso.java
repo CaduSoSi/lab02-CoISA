@@ -45,7 +45,6 @@ public class Descanso{
     public void defineNumeroSemanas(int semanasdescansadas) {
         this.semanasdescansadas = semanasdescansadas;
     }
-
     /**
      * Retorna o status de descanso do estudante,
      * descansado caso ele tenha pelo menos 26 horas para cada semana
