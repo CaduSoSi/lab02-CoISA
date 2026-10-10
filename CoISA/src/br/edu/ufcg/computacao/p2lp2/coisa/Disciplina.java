@@ -3,15 +3,17 @@ package br.edu.ufcg.computacao.p2lp2.coisa;
  * Representação de uma ferramenta de controle de uma disciplina cursada pelo estudante.
  * Permite cadastrar notas, horas de estudo daquela disciplina, calcular a média e verificar aprovação.
  *
- * @author Carlos Eduardo Souto Silva
+ * Laboratório de Programação 2 - Lab 2
+ *
+ * @author Carlos Eduardo Souto Silva - 20260016467
  */
 public class Disciplina {
     /**
-    * variável que guarda o nome da disciplina.
+    * Variável que guarda o nome da disciplina.
      */
     private String nomeDisciplina;
     /**
-     * variável que registra as horas de estudo.
+     * Variável que registra as horas de estudo.
      */
     private int horasEstudo;
     /**

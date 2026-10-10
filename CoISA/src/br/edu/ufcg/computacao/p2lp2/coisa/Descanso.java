@@ -5,7 +5,9 @@ package br.edu.ufcg.computacao.p2lp2.coisa;
  * Esses contadores podem ser atualizados.
  * A classe tem um método que calcula a relação entre as horas de descanso e o número de semanas consideradas.
  * (26 horas por semana).
- * @author Carlos Eduardo Souto Silva
+ * Laboratório de Programação 2 - Lab 2
+ *
+ * @author Carlos Eduardo Souto Silva - 20260016467
  */
 
 public class Descanso{
